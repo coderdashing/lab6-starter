@@ -14,11 +14,12 @@ info.o: info.c info.h
 	$(CC) $(FLAGS) info.c -c -o $@
 test.o: test.c 
 	$(CC) $(FLAGS) test.c -c -o $@
-test:person.o info.o test.c
-	$(CC) $(FLAGS) person.o info.o test.c
+test:person.o info.o test.o
+	gcc person.o info.o test.o -o test
 clean:
 	rm info.o
 	rm person.o
 	rm test
+	rm test.c
 	rm test.o
 .PHONY: clean
