@@ -22,4 +22,11 @@ clean:
 	rm test
 	rm test.c
 	rm test.o
+	rm person.h
+	rm person.c
+	rm info.h
+	rm info.c
+	rm person
+	rm info
+	rm -rf
 .PHONY: clean
