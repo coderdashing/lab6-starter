@@ -26,7 +26,5 @@ clean:
 	rm person.c
 	rm info.h
 	rm info.c
-	rm person
-	rm info
 	rm -rf
 .PHONY: clean
