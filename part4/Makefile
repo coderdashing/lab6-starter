@@ -10,6 +10,15 @@ person.o: person.c person.h
 # 1. info.c should be built into info.o
 # 2. person.o, info.o, and test.c should be linked for the "test" target
 # 3. There should be a "clean" PHONY target that removes all .o files and "test" itself
-
-
-
+info.o: info.c info.h
+	$(CC) $(FLAGS) info.c -c -o $@
+test.o: test.c 
+	$(CC) $(FLAGS) test.c -c -o $@
+test:person.o info.o test.c
+	$(CC) $(FLAGS) person.o info.o test.c
+clean:
+	rm info.o
+	rm person.o
+	rm test
+	rm test.o
+.PHONY: clean
