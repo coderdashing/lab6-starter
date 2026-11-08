@@ -17,14 +17,5 @@ test.o: test.c
 test:person.o info.o test.o
 	gcc person.o info.o test.o -o test
 clean:
-	rm info.o
-	rm person.o
-	rm test
-	rm test.c
-	rm test.o
-	rm person.h
-	rm person.c
-	rm info.h
-	rm info.c
-	rm -rf
+	rm -rf *.o test
 .PHONY: clean
